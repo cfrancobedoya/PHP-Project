@@ -31,3 +31,159 @@ PHP is not statically typed, meaning we don't have to tell you what kind of data
 When working with PHP, a very important thing is to debug our variables, for this we use the var_dump () function; passing by parameter the variable to review.
 
 In PHP we have two types of strings, those with single quotes and those with double quotes. The difference between these two strings is that the one with single quotes literally receives what you write to it, while the one with double quotes tries to interpret any variable within it.
+
+## Data types in PHP
+PHP has many types of data, however, at this moment we are going to focus on the most important and used ones that are boolean, integer, float, string, array and NULL.
+
+### Scalar types:
+* boolean:
+
+    Represents only a true or false value. 
+http://php.net/manual/es/language.types.boolean.php
+Valid values: true (true) false (false)
+    ```php
+        <?php
+            $a = true; 
+            $b = false; 
+        ?>
+    ```
+
+* Integer:
+
+    Represents a positive, negative, or 0 integer. 
+http://php.net/manual/en/language.types.integer.php
+    ```php
+        <?php
+            $a = -123;
+            $b = 0;
+            $c = 7763;
+        ?>
+    ```
+
+* Float or double: 
+
+    Represents a floating point number, there are precision problems with floating numbers due to the binary nature of computers. 
+http://php.net/manual/es/language.types.float.php
+    ```php
+        <?php
+            $a = 12.24; 
+            $b = 1.5e3; 
+            $c = 7E-10;
+        ?>
+    ```
+
+* string:
+
+    - Represents a character string.
+    - There are 4 ways to represent a chain. The main 2 are using single quotes or double quotes.
+        - Using single quotes where the text will be exactly as it is written.
+        - Using double quotes allows you to use escape characters and also expand the names of the variables, that is, it substitutes the value of the variables inside the strings.
+    - There are 2 additional ways called Heredoc and Nowdoc that are used to create multi-line strings.
+
+    More data type:
+https://www.php.net/manual/es/language.types.string.php#language.types.string.details
+    ```php
+        <?php
+            $a = ”Hola”; 
+            $b = ‘Mundo’; 
+        ?>
+    ```
+---
+
+### COMPOSITE TYPES
+* Array 
+
+    It represents a collection of values, although by default PHP used numerical indexes, the reality is that the structure is represented as a map that collects key-value pairs. The syntax to define an array will be from square brackets, although in previous versions of PHP it was necessary to use the array () function. The curly braces can be integers or strings, and the values can be of any PHP type, including an array type.
+    http://php.net/manual/es/language.types.array.php
+
+    ```php
+        <?php
+            $array = array(
+                "curso1" => "php",
+                "curso2" => "js",
+            );
+
+            // as of PHP 5.4
+            $array = [
+                "curso1" => "php",
+                "curso2" => "js",
+            ];
+
+            // numerical indices
+            $array = [
+                "php",
+                "js",
+            ];
+        ?>
+    ```
+
+* object:
+
+    Represents an instance of a class. We will take a closer look at this topic in the Object Oriented Programming class.
+    ```php
+        <?php
+            class Car
+            {
+                function move()
+                {
+                    echo "Going forward..."; 
+                }
+            }
+
+            $myCar = new Car();
+            $myCar->move();
+        ?>
+    ```
+
+* Callable:
+    
+    It is a special data type that represents something that can be "called", for example a function or a method.
+    ```php
+        <? php
+        // Variable that stores a callable
+        $ firstOfArray = function (array $ array) {
+            if (count ($ array) == 0) {return null; }
+            return $ array [0];
+        };
+
+        // This is our arrangement
+        $ values = [3, 2, 1];
+
+        // We use our callable and the value 3 is printed
+        echo $ firstOfArray ($ values);
+    ?>
+
+* iterable:
+
+    As of PHP 7.1 iterable it is a pseudo data type that can be traversed.
+    ```php
+        <?php
+
+            function foo(iterable $iterable) {
+                foreach ($iterable as $valor) {
+                    // ...
+                } 
+            }
+        ?>
+    ```
+---
+
+### Special types:
+* resource:
+    
+    It is a special data type that represents an external resource, for example a file external to your application.
+    ```php
+        <?php
+            $res = fopen("c:\\dir\\file.txt", "r");
+        ?>
+    ```
+
+* NULL:
+
+    It is a special value that is used to represent a valueless variable. 
+    http://php.net/manual/es/language.types.null.php
+    ```php
+        <?php
+            $a = null; 
+        ?>
+    ```
