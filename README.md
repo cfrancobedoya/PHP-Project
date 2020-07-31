@@ -187,3 +187,13 @@ https://www.php.net/manual/es/language.types.string.php#language.types.string.de
             $a = null; 
         ?>
     ```
+
+## Arrays
+
+These variables that store more than one data are known as arrays and their syntax is indicated with [] (square brackets).
+
+PHP uses indexes to locate the elements within the variable.
+
+The array structure in PHP is known as a map, which means it has a key value composition. Also, an array can contain more arrays and each one will follow the same structure.
+
+Something you should know is that in PHP you can store different types of data in the same arrangement.
