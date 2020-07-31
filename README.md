@@ -197,3 +197,12 @@ PHP uses indexes to locate the elements within the variable.
 The array structure in PHP is known as a map, which means it has a key value composition. Also, an array can contain more arrays and each one will follow the same structure.
 
 Something you should know is that in PHP you can store different types of data in the same arrangement.
+
+## Conditionals and Cycles
+The conditions allow us to make decisions in the code, if the condition is fulfilled then certain instructions will be executed if not, others will be executed. These are denoted by the **if else statement.**
+
+The cycles work hand in hand with the conditions, in this case if the instruction is fulfilled a given instruction will be executed repeatedly.
+
+We have added the jobs manually by accessing the array through their indexes, doing this could bring errors and we could not control it if we had many jobs. Now let's see a better way to do it with cycles.
+* The first one we have is do while, which will involve the initialization of variables and conditions.
+* The second we will see is for which is a more simplified way of using all the elements that make up the cycles.
