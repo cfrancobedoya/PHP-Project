@@ -206,3 +206,58 @@ The cycles work hand in hand with the conditions, in this case if the instructio
 We have added the jobs manually by accessing the array through their indexes, doing this could bring errors and we could not control it if we had many jobs. Now let's see a better way to do it with cycles.
 * The first one we have is do while, which will involve the initialization of variables and conditions.
 * The second we will see is for which is a more simplified way of using all the elements that make up the cycles.
+
+## While vs Do While
+### Cycles
+As we mentioned in our previous class, cycles or loops are of utmost importance when developing software because they allow us to repeat a block of actions and consequently re-use our code better, at this point we have already talked about how the for cycle and the cycle work do-while.
+
+Now we are going to review a couple of additional cycles in PHP which are also important to know. Take into account that most things can be done in different ways, so it is important that you choose the cycle that best suits your problem.
+
+### while vs. do… while
+In the previous class we talked about the do while cycle, here we will compare it with another cycle called while, let's recap the operation of do ... while:
+
+When we create a do ... while loop, we tell PHP to execute a certain code block as long as the condition you have inside is still being evaluated as true.
+
+This is the syntax of a do… while loop
+```php
+do {
+   code…
+} while (condition)
+```
+
+The while loop works the same way, but the main difference is that the evaluation will be done at the start of the loop:
+```php
+while (condition) {
+   code...
+}
+```
+
+The main difference is that the do while loop ensures that the internal code will run at least 1 time, whereas in the while loop if the condition is false from the start, the loop may never run
+
+http://php.net/manual/es/control-structures.while.php
+http://php.net/manual/es/control-structures.do.while.php
+
+### foreach
+The foreach cycle gives us a simple solution to iterate over the values ​​of an array, the syntax is as follows:
+```php
+foreach ($array as $ value) {
+    statements that can use $value
+}
+```
+
+In this syntax we find 4 parts:
+* The foreach keyword simply indicates the start of our block
+* Inside brackets the name of the array that we are going to be iterating is written, this array must be previously defined, in this example it is $ array
+* The word "as" followed by a variable name that we will use to access the element of the array that we are accessing, this variable must not previously exist and can only be used within this block. In the example it is $ value.
+* Between braces “{}” all the actions that we want to repeat, at the moment the cycle is executed the variable that we define to iterate (in the example $ value) already exists and can be used in this section, think that the value of This variable will be changing in each iteration.
+
+Assuming that in the previous example $ array = ['one', 'two', 'three'], the cycle will repeat 3 times and in each iteration the variable $ value will contain the element of the corresponding array, that is, in the first iteration $ value will be equal to 'one', in the second $ value it will be equal to 'two' and in the third $ value it will be equal to 'three'.
+
+There is an alternative syntax that allows us not only to know the value, it will also allow us to know the key, this way we will have access to both the key and the value of the array element:
+```php
+foreach ($array as $key => $value) {
+    statements that can use $key and $value
+}
+```
+
+http://php.net/manual/es/control-structures.foreach.php
