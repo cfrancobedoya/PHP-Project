@@ -381,3 +381,10 @@ Hello php !!!
 http://php.net/manual/es/language.operators.array.php
 
 ![](readmeImages/arrayOperators.png)
+
+## Functions
+The functions in PHP are denoted by the keyword function followed by the name of the function, the functions will serve to call and reuse code in our projects.
+
+When we work with functions, it is very important to take care of the scope of the variables, as some may enter their scope and others may not.
+
+PHP functions may or may not return a particular data. If we want to do it we can indicate it with the reserved word return.
