@@ -388,3 +388,10 @@ The functions in PHP are denoted by the keyword function followed by the name of
 When we work with functions, it is very important to take care of the scope of the variables, as some may enter their scope and others may not.
 
 PHP functions may or may not return a particular data. If we want to do it we can indicate it with the reserved word return.
+
+## Adding external files
+We will better organize our code for this we will separate it in another file called jobs.php.
+
+We will use the **include** keyword include to make the index file include the jobs.php file, if it finds it it includes it, but it will not show us a warning. There is another call **require** that if it is not found it shows us an error in the whole file.
+
+The include and require methods execute the code of the file every time they include it, this can bring errors in the execution of your code if you have files with functions because it will tell you that you cannot declare a function with the same name twice. To solve this there are **include_once** and **require_once** that force to include the file only once.
