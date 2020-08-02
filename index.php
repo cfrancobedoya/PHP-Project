@@ -1,24 +1,29 @@
 <?php 
   $name = 'Cristian Franco';
+  $limitMonths = 12;
   $jobs = [
     [
       'title' => 'Angular Developer',
-      'description' => 'This is an awesome job!!!'
+      'description' => 'This is an awesome job!!!',
+      'visible' => true,
+      'months' => 6
     ],
     [
-      'title' => 'NodeJS Developer'
+      'title' => 'NodeJS Developer',
+      'visible' => false,
+      'months' => 4
     ],
     [
-      'title' => 'Mobile Developer'
+      'title' => 'Mobile Developer',
+      'visible' => false,
+      'months' => 5
+    ],
+    [
+      'title' => 'Android Developer',
+      'visible' => true,
+      'months' => 2
     ]
   ];
-
-  // $var1 = 1;
-  // if($var1 > 2) {
-  //   echo 'is greater than 2';
-  // } else {
-  //   echo 'is not greater than 2';
-  // }
 
 
 ?>
@@ -71,11 +76,23 @@
           <h3 class="border-bottom-gray" >Work Experience</h3>
           <ul>
             <?php
+              $totalMonths = 0;
               $size = count($jobs);
-              for($idx = 0; $size; $idx++) {
+              for($idx = 0; $idx < $size; $idx++) {
+                $totalMonths  = $totalMonths + $jobs[$idx]['months'];
+                
+                if($totalMonths > $limitMonths) {
+                  break;
+                }
+
+                if($jobs[$idx]['visible'] != true) {
+                  continue;
+                }
+
                 echo '<li class="work-position">';
                 echo '<h5>' . $jobs[$idx]['title'] . '</h5>';
                 echo '<p>' . $jobs[$idx]['description'] . '</p>';
+                echo '<p>' . $jobs[$idx]['months'] . ' months' . '</p>';
                 echo '<strong>Achievements:</strong>';
                 echo '<ul>';
                 echo '<li>Lorem ipsum dolor sit amet, 80% consectetuer adipiscing elit.</li>';

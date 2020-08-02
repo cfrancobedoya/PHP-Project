@@ -261,3 +261,14 @@ foreach ($array as $key => $value) {
 ```
 
 http://php.net/manual/es/control-structures.foreach.php
+
+## Operators, conditionals, continue and break.
+In PHP there are four main types of operators:
+* Arithmetic.
+* Assignment.
+* Conditionals.
+* Increase.
+
+Let's take the time to practice and see more about conditions, in PHP we have the comparison operator (==) and different from (! =).
+
+We have the **continue** statement which when executed will cause it to iterate to the next line of the array. And the **break** statement that will make the cycle end.
