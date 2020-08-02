@@ -272,3 +272,112 @@ In PHP there are four main types of operators:
 Let's take the time to practice and see more about conditions, in PHP we have the comparison operator (==) and different from (! =).
 
 We have the **continue** statement which when executed will cause it to iterate to the next line of the array. And the **break** statement that will make the cycle end.
+
+## Operators
+It's important to mention that there is a concept known as operator precedence which will allow us to know in which order the operators found in a single statement should be executed.
+
+For example, in the statement:
+**1 + 2 * 3**
+
+Operation **2 * 3** will be executed first
+Then the sum will be executed with **1**
+
+This is because * has more precedence value than +.
+
+An easy way to control the precedence is using () parentheses, this way we can force the order that we want, for example (1 + 2) * 3 will be a different version and the addition will be executed first and then the multiplication.
+
+See more information about it: 
+http://php.net/manual/es/language.operators.precedence.php
+
+### Arithmetic operators
+http://php.net/manual/es/language.operators.arithmetic.php
+
+They function to perform arithmetic operations:
+![](readmeImages/arithmeticOperators.png)
+
+### Assignment operators
+http://php.net/manual/es/language.operators.assignment.php
+
+The main assignment operator is the symbol = (equal). It is important to note that this operator is not for comparison, normally on the left side of the operator we will have a variable, and this operator is used to assign the result of what is on the right to that variable.
+
+$variable = 5;
+
+What we have on the right can be a value, another variable, or the result of an operation or function.
+
+There are also other assignment operators that are combined with arithmetic or string operators and allow us to simplify some statements within PHP. These are examples of how they work:
+```php
+<?php
+    $a += $b
+    $a = $a + $b
+
+    $a -= $b
+    $a = $a - $b
+
+    $a *= $b
+    $a = $a * $b
+
+    $a /= $b
+    $a = $a / $b
+
+    $a %= $b
+    $a = $a % $b
+
+    $a .= $b
+    $a = $a . $b
+?>
+```
+### Comparison operators
+http://php.net/manual/es/language.operators.comparison.php
+
+They allow us to compare values.
+![](readmeImages/comparisonOperators.png)
+
+### Increment / Decrement Operators
+http://php.net/manual/es/language.operators.increment.php
+
+They allow to increase or decrease a value by 1.
+![](readmeImages/incrementDecrementOperators.png)
+
+It is very important to understand how the place where the operator is established affects, example:
+```php
+<?php 
+    $a = 1;
+    echo $a++;
+    echo $a;
+    echo ++$a;
+    echo $a;
+?>
+```
+
+print
+```terminal
+1
+2
+3
+3
+```
+
+### Logical operators
+http://php.net/manual/es/language.operators.logical.php
+
+They allow us to combine comparison results.
+![](readmeImages/logicalOperators.png)
+
+### Operators for strings
+There are 2 operators for strings the. (period) that allows us to concatenate strings, and the. = that was previously seen and allows us to simplify the syntax of concatenating something to the same string, example:
+```php
+<?php
+    $var1 = ‘Hello’ . ‘Php’;
+    $var1 .= ‘!!!’;
+    echo $var1;
+?>
+```
+Print:
+```terminal
+Hello php !!!
+```
+
+### Array operators
+http://php.net/manual/es/language.operators.array.php
+
+![](readmeImages/arrayOperators.png)
