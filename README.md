@@ -404,3 +404,11 @@ A class is a template or definition of something. And an instance is the concret
 Encapsulation will be the level of visibility that we want to give to some variable, for this we can use the access modifiers **private**, **public** and **protected**.
 
 With the reserved word **this** we will be referring to the variable that belongs to the class.
+
+## Constructor and Methods
+The constructor method will allow us to initialize default values, as well as pass data as a parameter when initializing an object.
+
+### Magic PHP methods
+All functions that have __ before the function name are known as magic methods.
+
+https://www.php.net/manual/es/language.oop5.magic.php
