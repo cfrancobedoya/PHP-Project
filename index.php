@@ -68,13 +68,22 @@
                   break;
                 }
 
-                printJob($jobs[$idx]);
+                printElement($jobs[$idx]);
               }
             ?>
           </ul>
         </div>
         <div>
             <h3 class="border-bottom-gray">Projects</h3>
+            <ul>
+              <?php
+                $projectsSize = count($projects);
+                for($idx = 0; $idx < $projectsSize; $idx++) {
+                  printElement($projects[$idx]);
+                }
+              ?>
+            </ul>
+
             <div class="project">
                 <h5>Project X</h5>
                 <div class="row">

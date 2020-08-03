@@ -412,3 +412,16 @@ The constructor method will allow us to initialize default values, as well as pa
 All functions that have __ before the function name are known as magic methods.
 
 https://www.php.net/manual/es/language.oop5.magic.php
+
+## Heritage
+Inheritance allows certain classes to have characteristics of a parent class. This class will be called son.
+
+As a good practice in PHP it's best to have the code divided into different files. This is exactly what we will do with the definition of the Jobs class, which should now have the same file name, this will be BaseElement.php.
+
+Now in another file we will create the Job class that will be the daughter of BaseElement.php. We will express the inheritance with the extends keyword.
+
+It is very convenient to use require_once when we want to use inheritance and include classes that are in other files.
+
+Within our child class we can override some method of the parent, this is a concept that we know as polymorphism. What polymorphism means is that we will have a method that will work according to its context where it is called.
+
+If we have properties with the word private in our parent class, from our daughter class we will not be able to access this property, but if we want it to remain private and the daughter classes have access, we can use the protected keyword.
