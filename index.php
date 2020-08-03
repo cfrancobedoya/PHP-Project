@@ -62,7 +62,7 @@
               $totalMonths = 0;
               $size = count($jobs);
               for($idx = 0; $idx < $size; $idx++) {
-                $totalMonths  = $totalMonths + $jobs[$idx]['months'];
+                $totalMonths  = $totalMonths + $jobs[$idx]->months;
                 
                 if($totalMonths > $limitMonths) {
                   break;
