@@ -425,3 +425,44 @@ It is very convenient to use require_once when we want to use inheritance and in
 Within our child class we can override some method of the parent, this is a concept that we know as polymorphism. What polymorphism means is that we will have a method that will work according to its context where it is called.
 
 If we have properties with the word private in our parent class, from our daughter class we will not be able to access this property, but if we want it to remain private and the daughter classes have access, we can use the protected keyword.
+
+## Heritage and polymorphism
+
+When working with objects and classes, we can sometimes come across classes that are very similar, even containing some methods or properties, but that are not completely the same.
+
+At this point we talk about Inheritance, a concept that allows us to reuse all the parts that are common and allow us to have what is not common in separate classes.
+
+Inheritance works as an inheritance string, that is, we can have a class and generate a "daughter class" from it, the "daughter" class reuses all the properties and methods of the "parent" class and also allows you to implement those parts that make it different.
+
+For example, we believe that we are building an e-commerce system that handles digital books and music albums, so that we can generate an inheritance chain like the following:
+
+![](readmeImages/heritagePolimor.png)
+
+Product (id, title, price, description)
+Book (isbn, publisher, author, pages, profitBonus) extends the Product
+Album (company, artist, duration, genre) extends the product
+
+In this example, a book is different from an album in some ways, however there are certain properties that are shared through the Product parent class, thus both classes including product properties and methods but in addition to that they implement properties and unique methods.
+
+Now we are going to talk about an additional concept, which is also very important, the term is **polymorphism** and means "many forms".
+
+Let's think that we want to calculate the profit that we will get from the sale of certain products, and in this case books and albums handle different percentages of profit, if we generate a getProfit method in the Product class this method could define how few we will earn from each product . For example, let's think we earn 10%.
+
+```php
+public function getProfit () {
+    return $price * 0.1;
+}
+```
+
+Adding this method within Product allows us to use it on objects of the Product class and also on specific objects in the daughter classes of Product, now, we are going to think that books handle a different formula because it handles an additional bonus value, in this case we could have the getProfit method but now declared inside the Reserve class and use the unique logic of this class:
+```php
+public function getProfit () {
+    return $ price * (0.1 + $this->profitBonus);
+}
+```
+
+This concept is a type of polymorphism which we call Overwriting and what allows us to replace something that was already defined in a parent class.
+
+An example of use for this inheritance chain is, for example, if we have a list of products, some of them are books and other albums, and if we want to know the total earnings, we simply have to go through the elements and add the result of the getProfit method and in each case the object will know the specific formula used because it is defined inside its class.
+
+In short, inheritance allows us to reuse the code between our classes and polymorphism, in this example overwriting, can help us classes that can react differently to methods with the same name.
