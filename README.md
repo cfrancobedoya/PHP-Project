@@ -466,3 +466,12 @@ This concept is a type of polymorphism which we call Overwriting and what allows
 An example of use for this inheritance chain is, for example, if we have a list of products, some of them are books and other albums, and if we want to know the total earnings, we simply have to go through the elements and add the result of the getProfit method and in each case the object will know the specific formula used because it is defined inside its class.
 
 In short, inheritance allows us to reuse the code between our classes and polymorphism, in this example overwriting, can help us classes that can react differently to methods with the same name.
+
+## Interfaces
+The interfaces can be seen as a contract or an agreement in which certain things can be standardized.
+
+The reserved word that we will use to declare an **interface** will be interface. And the one that will indicate that we are using an interface in a class will be **implements**.
+
+Using **Type Hinting** we will establish the type of data that we expect either a class or a specific data type.
+
+Inheritance in PHP will be simple, that is, it will only be able to inherit a single class, on the contrary, with the interfaces that we can implement several at the same time.
