@@ -482,3 +482,9 @@ This is a way to keep the file names unique in the same directory.
 This allows us to better organize the project.
 
 The keyword namespace is used to declare a private **namespace.**
+
+## PSR and PHPFIG
+https://www.php-fig.org/
+Several programmers came together to create a group called **PHP-FIG** with the aim of advancing the interoperability of libraries in PHP.
+
+This group created the **PSR** which are recommendations and standards for your PHP code.
