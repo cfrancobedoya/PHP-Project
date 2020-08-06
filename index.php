@@ -37,7 +37,7 @@
         <h1><?php echo $name;?></h1>
         <h2>PHP Developer</h2>
         <ul>
-          <li>Mail: hector@mail.com</li>
+          <li>Mail: cfrancobedoya@gmail.com</li>
           <li>Phone: 1234567890</li>
           <li>LinkedIn: https://linkedin.com</li>
           <li>Twitter: @hectorbenitez</li>

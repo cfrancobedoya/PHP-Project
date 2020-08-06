@@ -475,3 +475,10 @@ The reserved word that we will use to declare an **interface** will be interface
 Using **Type Hinting** we will establish the type of data that we expect either a class or a specific data type.
 
 Inheritance in PHP will be simple, that is, it will only be able to inherit a single class, on the contrary, with the interfaces that we can implement several at the same time.
+
+## Namespaces
+This is a way to keep the file names unique in the same directory.
+
+This allows us to better organize the project.
+
+The keyword namespace is used to declare a private **namespace.**

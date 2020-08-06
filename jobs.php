@@ -4,6 +4,10 @@ require 'app/Models/Job.php';
 require 'app/Models/Project.php';
 require_once 'app/Models/Printable.php';
 
+require 'lib1/Project.php';
+
+use App\Models\{Job, Project};
+
 $job1 = new Job('PHP Developer', 'This is an awesome job!!!');
 $job1->visible = true;
 $job1->months = 16;
