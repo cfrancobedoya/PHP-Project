@@ -515,3 +515,12 @@ A main characteristic of an ORM is that it makes connections to PostgreSQL and M
 
 ### PDO (PHP Data Object)
 It allows standardizing how to work with different database management systems.
+
+## Forms
+Let's make a template using the HTML code we have, we will put it as the title addJob.php
+
+We can send information from a form through different methods, GET or POST. To access this information from PHP we will call $ _GET and $ _POST, these are super global variables.
+Remember that to debug a variable we use the var_dump function.
+
+### Superglobals
+https://www.php.net/manual/es/language.variables.superglobals.php
