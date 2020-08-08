@@ -507,3 +507,11 @@ The databases are collections of data that we can use to consult it, store it, e
 When we talk about web applications we will work with database management systems, also known as relational databases.
 
 XAMPP comes with a tool called phpMyAdmin which is a client which connects to a database, in this case it connects to MariaDB.
+
+## ORM
+An ORM, which stands for Object Relational Mapping, is a concept in which we are going to create within our code some models based on the tables in our database.
+
+A main characteristic of an ORM is that it makes connections to PostgreSQL and MySQL more transparent, it also protects us from some SQL vulnerabilities and facilitates some validation of the information.
+
+### PDO (PHP Data Object)
+It allows standardizing how to work with different database management systems.
