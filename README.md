@@ -488,3 +488,15 @@ https://www.php-fig.org/
 Several programmers came together to create a group called **PHP-FIG** with the aim of advancing the interoperability of libraries in PHP.
 
 This group created the **PSR** which are recommendations and standards for your PHP code.
+
+## Composer
+https://getcomposer.org/download/
+We are going to add to our project a PHP dependency manager called Composer, it will not only help us to bring third-party libraries to the project, it will also implement the PSR4 standard that will allow us to have automatic file loading.
+https://www.php-fig.org/psr/psr-4/
+
+composer.phar will be a document that will help us manage dependencies in PHP, this goes very hand in hand with another file called composer.json.
+
+Inside our folder, run the next command:
+```terminal
+ $ php composer.phar install
+```
