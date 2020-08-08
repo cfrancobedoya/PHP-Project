@@ -500,3 +500,10 @@ Inside our folder, run the next command:
 ```terminal
  $ php composer.phar install
 ```
+
+## Introduction to databases
+The databases are collections of data that we can use to consult it, store it, execute filters, etc.
+
+When we talk about web applications we will work with database management systems, also known as relational databases.
+
+XAMPP comes with a tool called phpMyAdmin which is a client which connects to a database, in this case it connects to MariaDB.
