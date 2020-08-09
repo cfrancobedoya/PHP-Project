@@ -524,3 +524,12 @@ Remember that to debug a variable we use the var_dump function.
 
 ### Superglobals
 https://www.php.net/manual/es/language.variables.superglobals.php
+
+## Eloquent
+https://laravel.com/docs/7.x/eloquent
+https://packagist.org/packages/illuminate/database
+Packagist is a site where you will find multiple third-party libraries that you can integrate into your projects using composer, from here we will add our tool for database connection.
+
+We make the connection to the database and we will use Eloquent as our ORM. For the models to work we must make a class that inherits from Model.
+
+Once the models are ready, using the super global variable $ _POST we will connect the information from the form with our model to add it to the database.
